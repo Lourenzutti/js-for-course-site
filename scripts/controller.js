@@ -17,14 +17,9 @@ function load_page(path, path_js) {
             const html = parser.parseFromString(text, "text/html");
             text = html.querySelector("main").innerHTML;
             document.querySelector('main').innerHTML = text;
-            return document;
         })
         .then(() => {
-            load_from_md(path + "-page", "from-md");
-            return document;
-        })
-        .then((document) => {
-            if (path_js) controller_functions[path_js]();
+            load_from_md(path + "-page", path_js);
         });
 }
 
@@ -39,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-function load_from_md(file) {
+function load_from_md(file, path_js) {
     const page = "https://ubc-stat.github.io" + "/stat-200/" + file;
 
     fetch(page)
@@ -61,6 +56,9 @@ function load_from_md(file) {
                 document.getElementById("from-md").appendChild(tags[i]);
                 i--;
             }
+        })
+        .then(() => {
+            if (path_js) controller_functions[path_js]();
         });
 }
 
