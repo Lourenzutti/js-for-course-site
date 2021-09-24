@@ -67,3 +67,4 @@ function load_from_md(file) {
         });
 }
 
+const controller_functions = {};
