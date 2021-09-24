@@ -22,7 +22,7 @@ function load_page(path, path_js) {
             load_from_md(path + "-page", "from-md");
         })
         .then(() => {
-            if (path_js) controller_functions.path_js();
+            if (path_js) controller_functions[path_js]();
         });
 }
 
