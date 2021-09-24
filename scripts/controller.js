@@ -26,13 +26,6 @@ function load_page(path, path_js) {
         });
 }
 
-
-function load_js(path) {
-    script = document.createElement("script")
-    script.src = path;
-    document.head.append(script);
-}
-
 // add event listener to load the pages.
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('[data-page]').forEach(link => {
