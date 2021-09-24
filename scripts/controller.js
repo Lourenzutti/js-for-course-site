@@ -17,9 +17,10 @@ function load_page(path, path_js) {
             const html = parser.parseFromString(text, "text/html");
             text = html.querySelector("main").innerHTML;
             document.querySelector('main').innerHTML = text;
+            return ;
         })
         .then(() => {
-            load_from_md(path + "-page", "from-md");
+            return load_from_md(path + "-page", "from-md");
         })
         .then(() => {
             if (path_js) controller_functions[path_js]();
