@@ -40,4 +40,4 @@ function update_schedule_color() {
 
 }
 
-update_schedule_color();
+controller_functions.schedule = update_schedule_color;
