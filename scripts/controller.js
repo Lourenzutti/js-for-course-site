@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function load_from_md(file, path_js) {
-    const page = "https://ubc-stat.github.io" + "/stat-200/" + file;
+    const course = document.querySelector("head").course
+    const page = "https://ubc-stat.github.io" + "/" + course + "/" + file;
 
     fetch(page)
         .then(response => response.text())
