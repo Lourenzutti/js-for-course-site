@@ -33,8 +33,7 @@ function update_schedule_color() {
             end_week = new Date(year, monthIndex = months[end_week.split(" ")[0]], parseInt(end_week.split(" ")[1]));
 
             if (current_date > end_week) {
-                row.style.backgroundColor = "#ffc4c4";
-                row.style.opacity = 0.15;
+                row.style.backgroundColor = "#ffeeed";
                 row.nextElementSibling.style.backgroundColor = "#cdf7e0";
             }
         });
