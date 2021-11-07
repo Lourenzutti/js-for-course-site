@@ -34,6 +34,7 @@ function update_schedule_color() {
 
             if (current_date > end_week) {
                 row.style.backgroundColor = "#ffc4c4";
+                row.style.opacity = 0.15;
                 row.nextElementSibling.style.backgroundColor = "#cdf7e0";
             }
         });
