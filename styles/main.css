@@ -230,7 +230,7 @@ tbody tr:nth-child(even){
 }
 
 #course-schedule td:nth-child(2),
-#course-schedule td:nth-child(3){
+#course-schedule td:nth-last-child(2){
     border-right: 2px solid black;
 }
 
